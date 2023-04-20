@@ -7,8 +7,8 @@
 
 int main(void)
 {
-	fprintf(stderr, "and that piece of
-			art is useful\"
-			- Dora Korpar, 2015-10-19\n");
+	char q[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+
+	write(2, q, strlen(q));
 	return (1);
 }
