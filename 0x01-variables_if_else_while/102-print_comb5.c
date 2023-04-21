@@ -14,13 +14,13 @@ int main(void)
 	int m;
 	int n;
 
-	for (i = 48; i < 58; i++)
+	for (i = 48; i <= 58; i++)
 	{
-		for (j = 48; j < 58; j++)
+		for (j = 48; j <= 58; j++)
 		{
-			for (m = 48; m < 58; m++)
+			for (m = 48; m <= 58; m++)
 			{
-				for (n = m + 1; n < 58; n++)
+				for (n = m + 1; n <= 58; n++)
 				{
 					putchar(i);
 					putchar(j);
