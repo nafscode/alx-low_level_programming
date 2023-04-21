@@ -11,30 +11,20 @@ int main(void)
 {
 	int i;
 	int j;
-	int m;
-	int n;
 
-	for (i = 48; i <= 58; i++)
+	for (i = 0; i < 100; i++)
 	{
-		for (j = 48; j <= 58; j++)
+		for (j = i + 1; j < 100; j++)
 		{
-			for (m = 48; m <= 58; m++)
-			{
-				for (n = m + 1; n <= 58; n++)
-				{
-					putchar(i);
-					putchar(j);
-					putchar(32);
-					putchar(m);
-					putchar(n);
-
-					if (i == 57 && j == 56 && m == 57 && n == 57)
-						continue;
-
-					putchar(44);
-					putchar(32);
-				}
-			}
+			putchar((i / 10) + 48);
+			putchar((i % 10) + 48);
+			putchar(32);
+			putchar((j / 10) + 48);
+			putchar((j % 10) + 48);
+			if (( i == 98) && (j == 99))
+				continue;
+			putchar(44);
+			putchar(32);
 		}
 	}
 	putchar('\n');
