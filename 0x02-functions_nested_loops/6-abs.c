@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * main - A function that computes 
+ * _abs - A function that computes
  * absolute value of an integer
+ * @n: parameter
  * Return: 0
  */
 
