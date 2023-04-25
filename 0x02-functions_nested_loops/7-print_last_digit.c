@@ -9,12 +9,12 @@
 
 int print_last_digit(int x)
 {
-	if (x <= 0 && x >=9)
+	if (x < 0)
 	{
-		return (x);
+		return (-1 * (x % 10));
 	}
 	else
 	{
-		return (_abs(x % 10));
+		return (x % 10);
 	}
 }
