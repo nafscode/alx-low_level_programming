@@ -3,6 +3,7 @@
 /**
  * _islower - A function that checks for lowecase
  * character.
+ * @c: first parameter
  * Return: 0
  */
 
