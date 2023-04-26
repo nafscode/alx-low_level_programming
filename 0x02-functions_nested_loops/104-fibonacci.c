@@ -7,12 +7,12 @@
 
 int main(void)
 {
-	long int a = 0;
-	long int b = 1;
+	unsigned long int a = 0;
+	unsigned long int b = 1;
 	int i;
-	long int n;
+	unsigned long int n;
 
-	for (i = 0; i <=98; i++)
+	for (i = 0; i <= 98; i++)
 	{
 		n = a + b;
 		if (i == 98)
