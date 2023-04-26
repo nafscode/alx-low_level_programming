@@ -9,21 +9,20 @@ int main(void)
 {
 	long int a = 1;
 	long int b = 2;
-	long int limit = 4000000;
 	long int c;
-	int sum;
+	long int sum = 2;
 	int i;
 
-	for (i = 3; i <= limit; i++)
+	for (i = 3; i <= 33; i++)
 	{
-		c = a + b;
-		if (c % 2 == 0)
+		if ((c % 2 == 0) && (c < 4000000))
 		{
 			sum = sum + c;
 		}
+		c = a + b;
 		a = b;
 		b = c;
 	}
-	printf("%d\n", sum);
+	printf("%lu\n", sum);
 	return (0);
 }
