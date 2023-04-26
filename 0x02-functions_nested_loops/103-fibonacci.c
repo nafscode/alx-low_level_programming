@@ -10,20 +10,20 @@ int main(void)
 	long int a = 1;
 	long int b = 2;
 	long int limit = 4000000;
-	int i;
 	long int c;
-	long int sum;
+	int sum;
+	int i;
 
-	for (i = 0; i <= limit; i++)
+	for (i = 3; i <= limit; i++)
 	{
-		if (b % 2 == 0)
+		c = a + b;
+		if (c % 2 == 0)
 		{
-			sum = sum + b;
-			c = b;
-			b = a;
-			a = c;
+			sum = sum + c;
 		}
+		a = b;
+		b = c;
 	}
-	printf("%lu\n", sum);
+	printf("%d\n", sum);
 	return (0);
 }
