@@ -26,14 +26,14 @@ void print_times_table(int n)
 				_putchar((k / 10 % 10) + '0');
 				_putchar(k % 10 + '0');
 			}
-			else if (k > 9)
+			if (k > 9)
 			{
 				_putchar(' ');
 				_putchar(k / 10 + '0');
 				_putchar(k % 10 + '0');
 			}
 			else if (k <= 9 || k != 0)
-			
+			{
 				_putchar(' ');
 				_putchar(' ');
 				_putchar(k + '0');
