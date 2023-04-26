@@ -10,7 +10,6 @@ int main(void)
 {
 	long int a = 1;
 	long int b = 2;
-	int c = a + b;
 	int i;
 	long int n;
 
