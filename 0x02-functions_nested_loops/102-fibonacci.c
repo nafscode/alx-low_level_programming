@@ -8,19 +8,24 @@
 
 int main(void)
 {
-	int a, b, c, i, n;
-
-	n = 50;
-
-	a = b = 1;
-
-	for (i = 1; i <= n-2; i++)
+	int a = 1;
+	int b = 2;
+	int c = a + b;
+	int i;
+	for (i = 1; i <= 50; i++)
 	{
-		c = a + b;
-		printf("%d, ", c);
-
 		a = b;
-		c = c;
+		b = c;
+		c = a + b;
+		
+		if (i == 50)
+		{
+			printf("%d\n", c);
+		}
+		else
+		{
+			printf("%d, ", c);
+		}
 	}
 	return (0);
 }
