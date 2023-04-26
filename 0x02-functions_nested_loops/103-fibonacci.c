@@ -18,7 +18,7 @@ int main(void)
 	{
 		if (c % 2 == 0)
 		{
-			sum = sum + i;
+			sum = sum + c;
 		}
 		else
 		{
