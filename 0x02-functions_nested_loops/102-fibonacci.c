@@ -13,14 +13,10 @@ int main(void)
 	int i;
 	long int n;
 
-	printf("%lu, ", a);
-	printf("%lu, ", b);
-	
-	for (i = 3; i <= 50; i++)
+	printf("%lu, %lu, ", a, b);
+	for (i = 3; i <=50; i++)
 	{
 		n = a + b;
-		b = a;
-		a = n;
 		if (i == 50)
 		{
 			printf("%lu\n", n);
@@ -29,6 +25,8 @@ int main(void)
 		{
 			printf("%lu, ", n);
 		}
+		a = b;
+		b = n;
 	}
 	return (0);
 }
