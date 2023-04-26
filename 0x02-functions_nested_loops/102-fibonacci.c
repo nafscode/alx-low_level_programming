@@ -8,23 +8,27 @@
 
 int main(void)
 {
-	int a = 1;
-	int b = 2;
+	long int a = 1;
+	long int b = 2;
 	int c = a + b;
 	int i;
-	for (i = 1; i <= 50; i++)
+	long int n;
+
+	printf("%lu, ", a);
+	printf("%lu, ", b);
+	
+	for (i = 3; i <= 50; i++)
 	{
-		a = b;
-		b = c;
-		c = a + b;
-		
+		n = a + b;
+		b = a;
+		a = n;
 		if (i == 50)
 		{
-			printf("%d\n", c);
+			printf("%lu\n", n);
 		}
 		else
 		{
-			printf("%d, ", c);
+			printf("%lu, ", n);
 		}
 	}
 	return (0);
