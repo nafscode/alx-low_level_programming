@@ -14,7 +14,7 @@ int main(void)
 	long int n;
 
 	printf("%lu, %lu, ", a, b);
-	for (i = 3; i <=50; i++)
+	for (i = 3; i <= 50; i++)
 	{
 		n = a + b;
 		if (i == 50)
