@@ -10,7 +10,7 @@ int main(void)
 	long int a = 1;
 	long int b = 2;
 	long int c = a + b;
-	long int limit;
+	long int limit = 4000000
 	int i;
 	long int sum;
 
