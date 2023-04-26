@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * print_times_table - prints time tables
  * @n: parameter
