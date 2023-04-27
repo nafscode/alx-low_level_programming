@@ -8,7 +8,7 @@
 
 int _isdigit(int c)
 {
-	if (c >= 0 && c <= 9)
+	if (c >= (0 / 10 + '0') && c <= (9 / 10 + '0'))
 	{
 		return (1);
 	}
