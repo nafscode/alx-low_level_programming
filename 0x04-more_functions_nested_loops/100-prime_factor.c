@@ -8,11 +8,12 @@
 
 int main(void)
 {
-	long int n;
+	long n;
+	int d;
+	int max;
 
 	n = 612852475143;
-
-	long int d = 2, ans = 0, max;
+	d = 2;
 
 	while (n != 0)
 	{
@@ -26,8 +27,7 @@ int main(void)
 			n = n / d;
 			if (n == 1)
 			{
-				printf("%ld\n", max);
-				ans = 1;
+				printf("%d\n", max);
 				break;
 			}
 		}
