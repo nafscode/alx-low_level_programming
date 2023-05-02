@@ -25,6 +25,6 @@ void puts2(char *str)
 		{
 			_putchar(str[i]);
 		}
-		count++;
+		i++;
 	}
 } 
