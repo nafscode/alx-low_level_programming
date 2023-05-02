@@ -11,20 +11,20 @@
 void puts2(char *str)
 {
 	int i;
-	int j;
+	
+	i = 0;
 
-	j = strlen(str);
-
-	for (i = 0; i < j - 1; i += 2)
+	while (i >= 0)
 	{
 		if (str[i] == '\0')
 		{
+			_putchar('\n');
 			break;
 		}
-		else
+		if (i % 2 == 0)
 		{
 			_putchar(str[i]);
 		}
+		count++;
 	}
-	_putchar('\n');
-}
+} 
