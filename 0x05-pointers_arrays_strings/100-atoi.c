@@ -15,7 +15,7 @@ int _atoi(char *s)
 	j = strlen(s);
 	for (i = 0; i < j; i++)
 	{
-		if s[i] >= 0 || s[i] <= 9
+		if (s[i] >= 0 || s[i] <= 9)
 		{
 			_putchar(s[i] + '0');
 		}
