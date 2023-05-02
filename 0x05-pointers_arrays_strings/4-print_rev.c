@@ -18,11 +18,11 @@ void print_rev(char *s)
 	{
 		len++;
 		s++;
-		j = len;
-		for (i = s[j]; i >= s[0]; i--)
-		{
-			_putchar(s[i]);
-		}
+	}
+	j = len;
+	for (i = s[j]; i >= s[0]; i--)
+	{
+		_putchar(s[i]);
 	}
 	_putchar('\n');
 }
