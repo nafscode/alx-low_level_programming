@@ -21,7 +21,7 @@ int _atoi(char *s)
 		}
 		else
 		{
-			return;
+			return (0);
 		}
 	}
 }
