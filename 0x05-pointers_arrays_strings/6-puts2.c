@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+#include <string.h>
 
 /**
  * puts2 - A function that prints every other character of a string, starting
@@ -15,7 +15,7 @@ void puts2(char *str)
 
 	j = strlen(str);
 
-	for (i = 0; i < j -1; i += 2)
+	for (i = 0; i < j - 1; i += 2)
 	{
 		if (str[i] == '\0')
 		{
