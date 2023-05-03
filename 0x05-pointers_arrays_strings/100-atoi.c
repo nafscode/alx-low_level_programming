@@ -11,17 +11,19 @@ int _atoi(char *s)
 {
 	int i;
 	int j;
+	int result;
 
 	j = strlen(s);
 	for (i = 0; i < j; i++)
 	{
 		if (s[i] >= 0 || s[i] <= 9)
 		{
-			_putchar(s[i] + '0');
+			result = _putchar(s[i] + '0');
 		}
 		else
 		{
-			return (0);
+			result = _putchar(48);
 		}
 	}
+	return (result);
 }
