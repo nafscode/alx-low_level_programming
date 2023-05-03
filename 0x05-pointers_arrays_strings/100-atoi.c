@@ -10,6 +10,7 @@ int _atoi(char *s)
 {
 	int sign = 1;
 	int digit = 0;
+	int i = 0;
 
 	while (s[i] != '\0')
 	{
@@ -32,5 +33,5 @@ int _atoi(char *s)
 		}
 		i++;
 	}
-	return digit * sign;
+	return (digit * sign);
 }
