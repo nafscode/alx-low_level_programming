@@ -11,15 +11,14 @@
 
 char *_strncpy(char *dest, char *src, int n)
 {
-	char *z = dest + strlen(dest);
 	int i;
+	int len;
 
-	while (i < n)
+	len = strlen(dest);
+	for (i = 0; i < n && src[i] != '\0'; i++)
 	{
-		for (i = 0; src[i] != '\0'; i++)
-		{
-			z[i] = src[i];
-		}
-		z[i] = '\0';
+		dest[len + i] = src[i];
+	}
+	dest[len + i] = '\0';
 	return (dest);
 }
