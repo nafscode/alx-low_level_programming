@@ -16,7 +16,7 @@ char *rot13(char *src)
 
 	for (i = 0; src[i] != '\0'; i++)
 	{
-		for (j = 0; alpha[j] != '\0' j++)
+		for (j = 0; alpha[j] != '\0'; j++)
 		{
 			if (src[i] == alpha[j])
 			{
