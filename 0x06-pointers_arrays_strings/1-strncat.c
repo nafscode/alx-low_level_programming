@@ -14,10 +14,12 @@ char *_strncpy(char *dest, char *src, int n)
 	char *z = dest + strlen(dest);
 	int i;
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
+	while (i < n)
 	{
-		z[i] = src[i];
-	}
-	z[i] = '\0';
+		for (i = 0; src[i] != '\0'; i++)
+		{
+			z[i] = src[i];
+		}
+		z[i] = '\0';
 	return (dest);
 }
