@@ -15,9 +15,7 @@ char *cap_string(char *src)
 	int sep[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
 	if (*(src + i) >= 97 && *(src + i) <= 122)
-	{
 		*(src + i) = *(src + i) - 32;
-	}
 	i++;
 	while (*(src + i) != '\0')
 	{
