@@ -4,8 +4,8 @@
 /**
  * _strncpy - A function that copies a string
  * @dest: parameter
- * @ src: parameter
- * @ n: parameter
+ * @src: parameter
+ * @n: parameter
  * Return: dest
  */
 
