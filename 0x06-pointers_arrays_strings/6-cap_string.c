@@ -12,6 +12,7 @@ char *cap_string(char *str)
 {
 	int i;
 	int j;
+	char sep[] = ",;.!?(){}\n\t\" ";
 
 	str[0] = toupper(str[0]);
 
