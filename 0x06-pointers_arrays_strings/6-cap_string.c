@@ -11,19 +11,33 @@ char *cap_string(char *str)
 	int i;
 	int j;
 
-	int cap = 1;
+	int cap;
 	char sep[] = ",;.!?(){}\n\t\" ";
-	
-	for (i = 0; str[i] != '\0'; i++)
+
+	for (i = 0; cap = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] == sep[i])
+		if (str[0] > 96 && str[0] < 123)
 		{
 			cap = 1;
 		}
-		else if (cap)
+		for (j = 0; sep[c] != '\0'; j++)
 		{
-			str[i] = (str[i] - 32);
-			cap = 0;
+			if (sep[c] == str[i])
+			{
+				cap = 1;
+			}
+		}
+		if (cap)
+		{
+			if (str[i] > 96 && str[i] < 123)
+			{
+				str[i] -= 32;
+				cap = 0;
+			}
+			else if (str[i] > 64 && str[i] < 91)
+				cap = 0;
+			else if (str[i] > 47 && str[i] < 58)
+				cap = 0;
 		}
 	}
 	return (str);
