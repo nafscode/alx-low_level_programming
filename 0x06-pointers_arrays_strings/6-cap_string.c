@@ -6,29 +6,25 @@
  * Return: string
  */
 
-char *cap_string(char *src)
+char *cap_string(char *str)
 {
 	int i;
 	int j;
 
-	i = 0;
-	char sep[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
-
-	if (*(src + i) >= 97 && *(src + i) <= 122)
-		*(src + i) = *(src + i) - 32;
-	i++;
-	while (*(src + i) != '\0')
+	int cap = 1;
+	char sep[] = ",;.!?(){}\n\t\" ";
+	
+	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (j = 0; j < 13; j++)
+		if (str[i] == sep[i])
 		{
-			if (*(src + i) == sep[j])
-			{
-				if ((*(src + (i + 1)) >= 97) && (*(src + (i + 1)) <= 122))
-					*(src + (i + 1)) = *(s + (i + 1)) - 32;
-				break;
-			}
+			cap = 1;
 		}
-		i++;
+		else if (cap)
+		{
+			str[i] = (str[i] - 32);
+			cap = 0;
+		}
 	}
-	return (src);
+	return (str);
 }
