@@ -2,7 +2,7 @@
 
 /**
  * cap_string - A function that capitalizes all words of a string.
- * @src: input string
+ * @str: input string
  * Return: string
  */
 
@@ -12,33 +12,21 @@ char *cap_string(char *str)
 	int j;
 
 	int cap;
-	char sep[] = ",;.!?(){}\n\t\" ";
+	int sep[] = {32, 9, 10, 44, 59, 46, 33, 63, 34, 40, 41, 123, 125};
 
-	for (i = 0; cap = 0; str[i] != '\0'; i++)
-	{
-		if (str[0] > 96 && str[0] < 123)
+	i = 0;
+
+	if (*(str + i) > 96 && *(str + i) < 123)
+		*(str + i) = *(str + i) - 32;
+	i++;
+	while (*(str + i) != '\0')
+		for (j = 0; j < 13; j++)
 		{
-			cap = 1;
+			if (*(str + i) == sep[j])
+				if ((*(str + (i + 1)) > 96) && (*(str + (i + 1)) < 123))
+					*(str + (i + 1)) = *(str + (i + 1)) - 32;
+				break;
 		}
-		for (j = 0; sep[c] != '\0'; j++)
-		{
-			if (sep[c] == str[i])
-			{
-				cap = 1;
-			}
-		}
-		if (cap)
-		{
-			if (str[i] > 96 && str[i] < 123)
-			{
-				str[i] -= 32;
-				cap = 0;
-			}
-			else if (str[i] > 64 && str[i] < 91)
-				cap = 0;
-			else if (str[i] > 47 && str[i] < 58)
-				cap = 0;
-		}
-	}
+		i++;
 	return (str);
 }
