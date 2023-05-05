@@ -9,19 +9,19 @@
 int _atoi(char *s)
 {
 	int sign = 1;
-	unsigned int digit = 0;
+	int digit = 0;
 	int i = 0;
 
 	while (s[i] != '\0')
 	{
-		if (s[i] == '-')
+		if (s[0] == '-')
 		{
-			sign *= -1;
+			sign = -1;
+			i++;
 		}
-		if (s[i] == '-' || s[i] == '+')
+		if (s[0] == '+')
 		{
 			i++;
-			continue;
 		}
 		if (s[i] >= '0' && s[i] <= '9')
 		{
