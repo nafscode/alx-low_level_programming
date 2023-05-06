@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h"
 
 /**
  * _atoi - A function that convert a string to an integer.
@@ -10,9 +11,10 @@ int _atoi(char *s)
 {
 	int sign = 1;
 	unsigned int digit = 0;
-	int i = 0;
+	int i;
+	n = strlen(*s);
 
-	while (s[i] != '\0')
+	for (i = 0; i < n -1; i++)
 	{
 		if (s[i] == '-')
 		{
@@ -27,11 +29,10 @@ int _atoi(char *s)
 		{
 			digit = digit * 10 + (s[i] - '0');
 		}
-		else
+		else if (digit > 0)
 		{
 			break;
 		}
-		i++;
 	}
 	return (digit * sign);
 }
