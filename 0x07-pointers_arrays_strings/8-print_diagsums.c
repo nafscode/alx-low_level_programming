@@ -11,14 +11,22 @@
 
 void print_diagsums(int *a, int size)
 {
-		int i, sum1 = 0, sum2 = 0;
+	int i;
+	int sum1;
+	int sum2;
+	int square;
 
-		for (i = 0; i < (size * size); i++)
-		{
-			if (i % (size + 1) == 0)
-				sum1 += *(a + i);
-			if (i % (size - 1) == 0 && i != 0 && i < size * size - 1)
-				sum2 += *(a + i);
-		}
-			printf("%d, %d\n", sum1, sum2);
+	i = 0;
+	sum1 = 0;
+	sum2 = 0;
+	square = size * size;
+	while (i < square)
+	{
+		if (i % (size + 1) == 0)
+			sum1 = sum1 + a[i];
+		if (i % (size - 1) == 0 && i != (square - 1) && i != 0)
+			sum2 = sum2 + a[i];
+		i++;
+	}
+	printf("%d, %d\n", sum1, sum2);
 }
