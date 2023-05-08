@@ -14,15 +14,11 @@ void print_diagsums(int *a, int size)
 	int sum2 = 0;
 	int i;
 
-	for (i = 0; i < (size * size); i++)
+	for (i = 0; i < size; i++)
 	{
-		if (i % (size + 1) == 0)
-		{
-			sum1 += *(a + i);
-		}
-		if (i % (size - 1) == 0 && i != 0 && i < size * size - 1)
-		{
-			sum2 += *(a + i);
-		}
+		sum1 += a[i];
+		sum2 += a[size - i -1];
+		a += size;
+
 	printf("%d, %d\n", sum1, sum2);
 }
