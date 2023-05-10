@@ -36,9 +36,9 @@ void print(char *s)
 
 int is_palindrome(char *s)
 {
-	if (*s = '\0')
+	if (*s == '\0')
 		return (1);
-	if (print(*s) == reverse(*s))
+	if (print(s) == reverse(s))
 		return (1);
 	else
 		return (0);
