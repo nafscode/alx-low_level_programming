@@ -49,7 +49,7 @@ int is_palindrome(char *s)
 
 	if (*s == '\0')
 		return (1);
-	if normal == turned
+	if (normal == turned)
 		return (1);
 	else
 		return (0);
