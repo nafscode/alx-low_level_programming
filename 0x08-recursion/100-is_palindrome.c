@@ -3,29 +3,33 @@
 /**
  * reverse - A function that reverse a string
  * @s: parameter
+ * Return: reversed string
  */
 
-void reverse(char *s)
+char reverse(char *s)
 {
+	char a;
+
 	if (*s)
-	{
-		reverse(s + 1);
-		_putchar(*s);
-	}
+		a = reverse(s + 1);
+		a += _putchar(*s);
+		return (a);
 }
 
 /**
  * print - A function that prints a string
  * @s: parameter
+ * Return: string
  */
 
-void print(char *s)
+char print(char *s)
 {
+	char a;
+
 	if (*s)
-	{
-		_putchar(*s);
-		print(s + 1);
-	}
+		a = _putchar(*s);
+		a += print(s + 1);
+		return (a);
 }
 /**
  * is_palindrome - A function that returns 1 if a string is a palindrome
