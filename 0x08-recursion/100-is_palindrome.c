@@ -1,56 +1,44 @@
 #include "main.h"
 
 /**
- * reverse - A function that reverse a string
- * @s: parameter
- * Return: reversed string
+ * _strlen - returns the length of a string.
+ * @s: string
+ * Return: the length of a string.
  */
-
-char reverse(char *s)
+int _strlen(char *s)
 {
-	char a;
-
-	if (*s)
-	{
-		a = reverse(s + 1);
-		a += _putchar(*s);
-	}
-	return (a);
+		if (*s)
+			return (1 + _strlen_recursion(s + 1));
+		else
+			return (0);
 }
 
 /**
- * print - A function that prints a string
- * @s: parameter
- * Return: string
+ * compare - compares each character of the string.
+ * @s: string
+ * @n1: first iterator.
+ * @n2: last iterator.
+ * Return: .
  */
-
-char print(char *s)
+int compare(char *s, int n1, int n2)
 {
-	char a;
-
-	if (*s)
+	if (*(s + n1) == *(s + n2))
 	{
-		a = _putchar(*s);
-		a += print(s + 1);
+		if (n1 == n2 || n1 == n2 + 1)
+			return (1);
+		return (0 + compare(s, n1 + 1, n2 - 1));
 	}
-	return (a);
+	return (0);
 }
-/**
- * is_palindrome - A function that returns 1 if a string is a palindrome
- * and 0 if not.
- * @s: string parameter
- * Return: 1 or 0
- */
 
+/**
+ * is_palindrome - detects if a string is a palindrome.
+ * @s: string.
+ * Return: 1 if s is a palindrome, 0 if not.
+ */
 int is_palindrome(char *s)
 {
-	char normal = print(s);
-	char turned = reverse(s);
-
 	if (*s == '\0')
 		return (1);
-	if (normal == turned)
-		return (1);
-	else
-		return (0);
+	return (compare(s, 0, _strlen(s) - 1));
 }
