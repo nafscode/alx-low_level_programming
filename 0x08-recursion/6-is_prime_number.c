@@ -10,7 +10,6 @@
 int is_prime_number(int n)
 {
 	int prime(int k, int n);
-	int k = 2;
 
 	if (n == 2)
 	{
@@ -28,9 +27,9 @@ int is_prime_number(int n)
 
 int prime(int k, int n)
 {
-	if (n < 2 || b % k == 0)
+	if (n < 2 || n % k == 0)
 		return (0);
-	else if (k > b / 2)
+	else if (k > n / 2)
 		return (1);
 	else
 		return (prime(k + 1, n));
