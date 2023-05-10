@@ -11,9 +11,11 @@ char reverse(char *s)
 	char a;
 
 	if (*s)
+	{
 		a = reverse(s + 1);
 		a += _putchar(*s);
-		return (a);
+	}
+	return (a);
 }
 
 /**
@@ -27,9 +29,11 @@ char print(char *s)
 	char a;
 
 	if (*s)
+	{
 		a = _putchar(*s);
 		a += print(s + 1);
-		return (a);
+	}
+	return (a);
 }
 /**
  * is_palindrome - A function that returns 1 if a string is a palindrome
