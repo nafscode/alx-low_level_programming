@@ -7,7 +7,7 @@
 
 void _puts_recursion(char *s)
 {
-	if ((*s >= 'a' || *s >= 'A') && (*s <= 'z' || *s <= 'Z') || *s == ' ' || *s == ',')
+	if (((*s >= 'a' || *s >= 'A') && (*s <= 'z' || *s <= 'Z')) || (*s == ' ' || *s == ','))
 	{
 		_putchar(*s);
 		_puts_recursion(s + 1);
