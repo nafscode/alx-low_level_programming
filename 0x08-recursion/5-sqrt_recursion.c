@@ -10,7 +10,7 @@ int _sqrt_recursion(int n)
 {
 	int another_sqrt(int n, int x);
 
-	x = 1;
+	int x = 1;
 
 	return (another_sqrt(n, x));
 }
