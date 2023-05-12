@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	
+
 	i = atoi(argv[1]);
 	j = atoi(argv[2]);
 	k = i * j;
@@ -27,4 +27,3 @@ int main(int argc, char *argv[])
 	printf("%d\n", k);
 	return (0);
 }
-	
