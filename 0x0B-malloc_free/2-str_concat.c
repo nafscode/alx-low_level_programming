@@ -12,6 +12,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
+	unsigned int i;
 	char *s3;
 	int n = strlen(s1);
 	int m = strlen(s2);
