@@ -1,0 +1,18 @@
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * creae_array - A function that creates an array of chars,
+ * and initialize it with a specific char.
+ * @size: size of array
+ * @c: character to be initialized
+ * Return: a pointer to the array of NULL
+ */
+
+char *create_array(unsigned int size, char c)
+{
+	char *str;
+
+	str = malloc(sizeof(size));
+	str[0] = c;
+}
