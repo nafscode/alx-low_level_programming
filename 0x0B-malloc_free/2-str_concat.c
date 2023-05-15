@@ -13,14 +13,16 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *s3;
+	int n = strlen(s1);
+	int m = strlen(s2);
 
-	s3 = (char *) malloc(strlen(s1) + strlen(s2));
-
-	strcpy(s3, s1);
-
-	while (*s2 != '\0')
-		*s3++ = *s2++;
-	*s3 = '\0';
+	s3 = (char *)malloc(n + m + 2);
+	if (s3 == NULL)
+		return (NULL);
 	
+	for (i = 0; i <= n; i++)
+		*s3++ = *s1++;
+	for (i = 0; i <= m; i++)
+		*s3++ = *s2++;
 	return (s3);
 }
