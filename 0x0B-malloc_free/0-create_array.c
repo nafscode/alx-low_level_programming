@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 /**
- * creae_array - A function that creates an array of chars,
+ * create_array - A function that creates an array of chars,
  * and initialize it with a specific char.
  * @size: size of array
  * @c: character to be initialized
@@ -20,6 +20,7 @@ char *create_array(unsigned int size, char c)
 	if (arr == 0)
 	{
 		return (NULL);
+		printf("failed to allocate memory");
 	}
 	else
 	{
