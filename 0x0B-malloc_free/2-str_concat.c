@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 /**
  * str_concat - A function that concatenates two strings.
@@ -19,7 +20,7 @@ char *str_concat(char *s1, char *s2)
 
 	while (*s2 != '\0')
 		*s3++ = *s2++;
-	*z = '\0';
+	*s3 = '\0';
 	
 	return (s3);
 }
