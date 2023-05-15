@@ -12,6 +12,7 @@
 
 char *_strdup(char *str)
 {
+	int i;
 	char *copy;
 	int n = strlen(str);
 
@@ -26,10 +27,8 @@ char *_strdup(char *str)
 	{
 		return (NULL);
 	}
-	else
-	{
-		strcpy(copy, str);
-	}
+	for (i = 0; i <= n; i++)
+		copy[i] = str[i];
 
 	return (copy);
 }
