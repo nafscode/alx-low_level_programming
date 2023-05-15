@@ -30,11 +30,8 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-
-	for (i = 0; i < n; i++)
-		s3[i] = s1[i];
-	for (j = 0; j <= m; j++)
-		s3[j] = s2[j];
+	strcpy(s3, s2);
+	strcpy(s3, s2);
 
 	return (s3);
 }
