@@ -21,15 +21,17 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	copy = malloc(sizeof(char) * (n + 1));
+	copy = (char *)malloc(sizeof(char) * (n + 1));
+
+	if (copy == NULL)
+	{
+		return (NULL);
+	}
 
 	for (i = 0; i <= n; i++)
 	{
 		copy[i] = str[i];
 	}
-
-	if (copy == NULL)
-		return (NULL);
 
 	return (copy);
 }
