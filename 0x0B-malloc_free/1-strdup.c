@@ -12,7 +12,6 @@
 
 char *_strdup(char *str)
 {
-	unsigned int i;
 	char *copy;
 	unsigned int n = strlen(str);
 
@@ -21,17 +20,14 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	copy = (char *)malloc(sizeof(char) * (n + 1));
+	copy = (char *)malloc((n + 1) * sizeof(char));
 
 	if (copy == NULL)
 	{
 		return (NULL);
 	}
 
-	for (i = 0; i <= n; i++)
-	{
-		copy[i] = str[i];
-	}
+	strcpy(copy, str);
 
 	return (copy);
 }
