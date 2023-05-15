@@ -12,9 +12,9 @@
 
 char *_strdup(char *str)
 {
-	int i;
+	unsigned int i;
 	char *copy;
-	int n = strlen(str);
+	unsigned int n = strlen(str);
 
 	if (str == NULL)
 	{
