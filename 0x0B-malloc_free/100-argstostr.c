@@ -16,10 +16,10 @@ char *argstostr(int ac, char **av)
 		return (NULL);
 	}
 	
-	char **str_ptr;
+	char *str_ptr;
 	int i;
 
-	str_ptr = malloc(sizeof(*char) * ac);
+	str_ptr = malloc(sizeof(char) * ac);
 	
 	if (str_ptr == NULL)
 	{
