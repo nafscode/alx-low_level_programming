@@ -18,7 +18,7 @@ char *argstostr(int ac, char **av)
 	}
 	
 	char *str_ptr;
-	int i, lenght, index;
+	int i, j, lenght, index;
 
 	lenght = 0;
 	for (i = 0; i < ac; i++)
