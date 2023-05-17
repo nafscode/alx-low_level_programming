@@ -11,13 +11,13 @@
 
 char *argstostr(int ac, char **av)
 {
+	char **str_ptr;
+	int i;
+
 	if (ac == 0 || av == NULL)
 	{
 		return (NULL);
 	}
-	
-	char **str_ptr;
-	int i, lenght;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
@@ -28,11 +28,11 @@ char *argstostr(int ac, char **av)
 	{
 		return (NULL);
 	}
-	else
+	for (i = 0; i < ac; i++)
 	{
-		for (i = 0; i < ac; i++)
-			str_ptr[i] = av[i];
-			str_ptr[i] += '\n';
+		str_ptr[i] = av[i];
+		str_ptr[i] += '\n';
 	}
+	
 	return (str_ptr);
 }
