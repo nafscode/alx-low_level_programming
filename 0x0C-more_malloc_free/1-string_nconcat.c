@@ -6,14 +6,15 @@
  * Return: lenght
  */
 
-unsigned int lenght (char *s1)
+unsigned int lenght(char *s1)
 {
 	unsigned int i;
+
 	if (s1 == NULL)
 		return (0);
 	for (i = 0; s1[i] != '\0'; i++)
 	{}
-	
+
 	return (i);
 }
 
@@ -35,7 +36,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
-	
+
 	len1 = lenght(s1);
 	len2 = lenght(s2);
 	if (n >= len2)
