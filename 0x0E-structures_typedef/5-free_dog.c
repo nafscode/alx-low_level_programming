@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
 
@@ -6,6 +5,7 @@
  * free_dog - A function that frees the struct dog
  * @d: struct dog
  */
+
 void free_dog(dog_t *d)
 {
 	if (d)
@@ -14,4 +14,4 @@ void free_dog(dog_t *d)
 		free(d->owner);
 		free(d);
 	}
-}										}
+}
