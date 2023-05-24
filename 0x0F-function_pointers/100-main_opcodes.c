@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	if (bytes < 0)
 	{
 		printf("Error\n");
-		return 2;
+		return (2);
 	}
 
 	ptr = (char *)main;
