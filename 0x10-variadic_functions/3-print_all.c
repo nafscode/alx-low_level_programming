@@ -7,7 +7,6 @@
  * @format: List of types of argument passed to the function
  * Return: nothing
  */
-
 void print_all(const char * const format, ...)
 {
 	unsigned int count;
@@ -18,7 +17,6 @@ void print_all(const char * const format, ...)
 	va_start(args, format);
 
 	sep = "";
-
 	count = 0;
 
 	while (format && format[count])
@@ -46,9 +44,7 @@ void print_all(const char * const format, ...)
 		}
 		sep = ", ";
 		count++;
-
 	}
-
 	printf("\n");
 	va_end(args);
 }
