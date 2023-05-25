@@ -6,13 +6,16 @@
  * print_strings - A function that prints strings, followed by a new line.
  * @separator: Separator
  * @n: numbers of arguments
+ * @...: A variable number of srings to be printed
  * Return: nothing
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list args;
+
 	unsigned int count;
+
 	char *str
 
 	va_start(args, n);
@@ -35,5 +38,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 	}
 	va_end(args);
+
 	printf("\n");
 }
