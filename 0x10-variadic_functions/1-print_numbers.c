@@ -9,7 +9,7 @@
  * Return: nothing
  */
 
-void print_numbers(const char *seperator, const unsigned int n, ...)
+void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int count;
 
@@ -21,9 +21,9 @@ void print_numbers(const char *seperator, const unsigned int n, ...)
 	{
 		printf("%d", va_arg(args, unsigned int));
 
-		if (seperator != NULL && count != n - 1)
+		if (separator != NULL && count != n - 1)
 		{
-			printf("%s", seperator);
+			printf("%s", separator);
 		}
 	}
 	va_end(args);
