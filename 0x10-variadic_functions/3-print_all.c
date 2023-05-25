@@ -15,8 +15,10 @@ void print_all(const char * const format, ...)
 	char *ptr;
 	char *sep;
 
-	va_start(arg, format);
+	va_start(args, format);
+
 	sep = "";
+
 	count = 0;
 
 	while (format && format[count])
@@ -46,7 +48,7 @@ void print_all(const char * const format, ...)
 		count++;
 
 	}
-	va_end(args);
 
 	printf("\n");
+	va_end(args);
 }
