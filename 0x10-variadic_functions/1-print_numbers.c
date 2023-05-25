@@ -13,6 +13,7 @@ void print_numbers(const char *seperator, const unsigned int n, ...)
 	unsigned int count;
 
 	va_list args;
+
 	va_start(args, n);
 
 	for (count = 0; count < n; i++)
