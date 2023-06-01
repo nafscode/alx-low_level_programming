@@ -3,8 +3,8 @@
 
 /**
  * print_list - A function that prints all the elements of a list_t list.
- * @h: pointer to head of the list.
- * Return: 0
+ * @h: linked list
+ * Return: number of elements printed
  */
 
 size_t print_list(const list_t *h)
