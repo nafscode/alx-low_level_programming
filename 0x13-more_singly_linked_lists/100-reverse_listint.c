@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 
 /**
  * reverse_listint - A function that reserves a linked list
