@@ -25,26 +25,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	buffer = malloc(sizeof(char) * (letters));
 
 	if (!buffer)
-	{
-		close(file_des);
 		return (0);
-	}
 
 	n_read = read(file_des, buffer, letters);
-	if (n_read == -1)
-	{
-		close(file_des);
-		free(buffer);
-		return (0);
-	}
 
 	n_write = write(STDOUT_FILENO, buffer, n_read);
-	if (n_write == -1 || n_write != n_read)
-	{
-		close(file_des);
-		free(buffer);
-		return (0);
-	}
 
 	close(file_des);
 
