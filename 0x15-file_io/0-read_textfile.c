@@ -13,7 +13,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int file_des;
 	ssize_t n_read;
 	ssize_t n_write;
-	car *buffer;
+	char *buffer;
 
 	if (!filename)
 		return (0);
@@ -23,9 +23,12 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 
 	buffer = malloc(sizeof(char) * (letters));
+
 	if (!buffer)
+	{
 		close(file_des);
 		return (0);
+	}
 
 	n_read = read(file_des, buffer, letters);
 	if (n_read == -1)
